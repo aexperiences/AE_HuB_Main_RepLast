@@ -1,0 +1,42 @@
+{
+  "version": "1.0",
+  "schemas": {
+    "task_envelope": {
+      "type": "object",
+      "required": ["task_id", "lane", "description", "priority", "stakes"],
+      "properties": {
+        "task_id": { "type": "string" },
+        "lane": { "type": "string" },
+        "description": { "type": "string" },
+        "priority": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "stakes": { "type": "string", "enum": ["low", "medium", "high", "irreversible"] },
+        "metadata": { "type": "object" }
+      }
+    },
+    "provenance": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["claim", "source", "verified"],
+        "properties": {
+          "claim": { "type": "string" },
+          "source": { "type": "string" },
+          "verified": { "type": "boolean" },
+          "timestamp": { "type": "string", "format": "date-time" }
+        }
+      }
+    },
+    "triad_output": {
+      "type": "object",
+      "required": ["task_id", "decision", "confidence", "provenance", "would_act"],
+      "properties": {
+        "task_id": { "type": "string" },
+        "decision": { "type": "string" },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "provenance": { "$ref": "#/schemas/provenance" },
+        "would_act": { "type": "boolean" },
+        "dissent": { "type": "string" }
+      }
+    }
+  }
+}
