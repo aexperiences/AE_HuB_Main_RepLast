@@ -1,16 +1,34 @@
-# AEHub Build State
-**Last updated:** 2026-06-07  
-**Current Phase:** 0 — Ignition (shadow mode only)  
-**Version of PLAYBOOK.md:** 1.0
+# AEHub — STATE (Living Tracker)
 
-## What is built
-- PLAYBOOK.md (v1.0)
-- contracts.json
-- event-bus.ts (clean foundation)
-- STATE.md initialized
+**Last Updated:** June 8, 2026
 
-## What is next
-Build the first low-stakes triad once the bus is wired.
+---
 
-## Decisions log
-- All work stays in full shadow mode until calibrated
+## Current Phase
+**Phase 0 — Safety Cleanup**
+
+---
+
+## What’s Built / Working
+- All manual chat with agents (Anetta, Sharon, Dolly, Geoffrey, etc.) is fully functional
+- Automatic/scheduled agent runs are **disabled** (safety edit in `agent-hub.ts`)
+- `PLAYBOOK.md`, `SOURCE_OF_TRUTH.md`, `AEHub_Build_Roadmap.md` are in place
+
+---
+
+## What’s Next (small steps)
+1. Update `STATE.md` (this file) — done
+2. Decide the next bounded improvement (user-friendliness / navigation / provenance on outputs)
+3. Keep editing directly on GitHub for speed
+
+---
+
+## Key Decisions Made
+- Safety first: Turn off auto-runs before making the hub more usable
+- Edit on GitHub for now (no local server needed yet)
+- Follow `PLAYBOOK.md` rules at the start of every session
+
+---
+
+**This is the short living tracker.**  
+Update it at the end of every work session.
