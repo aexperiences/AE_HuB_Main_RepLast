@@ -1779,6 +1779,8 @@ DATE RULE: When a user gives a date without a year (e.g. "May 30", "end of Q2"),
 });
 // ── TEMPORARILY DISABLED: Scheduled / Auto Runs (for safety) ───────────────
 /*
+// ── TEMPORARILY DISABLED: Scheduled / Auto Runs (Phase 0 safety) ─────────────
+/*
 // ── Schedules ─────────────────────────────────────────────────────────────────
 router.get("/agent-hub/schedules", requireEmployee, async (req, res): Promise<void> => {
   const tid = getTenantId(req);
