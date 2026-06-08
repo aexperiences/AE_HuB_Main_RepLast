@@ -1777,7 +1777,8 @@ DATE RULE: When a user gives a date without a year (e.g. "May 30", "end of Q2"),
 
   res.json({ messages: newMessages });
 });
-
+// ── TEMPORARILY DISABLED: Scheduled / Auto Runs (for safety) ───────────────
+/*
 // ── Schedules ─────────────────────────────────────────────────────────────────
 router.get("/agent-hub/schedules", requireEmployee, async (req, res): Promise<void> => {
   const tid = getTenantId(req);
@@ -1821,7 +1822,7 @@ router.get("/agent-hub/runs", requireEmployee, async (req, res): Promise<void> =
     .where(eq(agentRunsTable.tenantId, tid))
     .orderBy(desc(agentRunsTable.startedAt)).limit(20);
   res.json(rows);
-});
+}*/);
 
 router.get("/agent-hub/runs/:id", requireEmployee, async (req, res): Promise<void> => {
   const tid = getTenantId(req);
